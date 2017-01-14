@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Rutgers Econ Prerequisite Tree</title>
+</head>
+<body>
+	<p> 7 classes in red are required classes. </p>
+
+	<script type="text/vnd.graphviz" id="cluster">
+digraph {
+	ordering = "out";
+	overlap = false;
+	splines = true;
+	ranksep = 4;
+	subgraph core {
+		label="Core Classes (all 7)"
+		ordering = "out";
+		node [fillcolor=red style=filled]
+
+		102
+		103
+		320
+		321
+		322
+		CalcI
+		Stats
+
+		CalcI->320
+		102->320 [headport=nw tailport=s]
+		CalcI->321
+		102->321 [headport=nw tailport=s]
+		103->321 [headport=ne tailport=s style=dashed]
+		102->322 [headport=nw tailport=s]
+		103->322 [headport=ne tailport=s style=dashed]
+		Stats->322 [style=dotted]
+		CalcI->322
+	}
+
+	subgraph cluster_lower_elec {
+		style=filled;
+		color=lightgrey;
+		label="Lower Level Electives (max 3)";
+
+		300
+		301
+		305
+		307
+		311
+		312
+		327
+		331
+		334
+		348
+		362
+		389
+		390
+		395
+	}
+
+	subgraph cluster_upper_elec {
+		label="Upper Level Electives (min 4)"
+
+		400
+		401
+		402
+		412
+		413
+		414
+		415
+		417
+		421
+		432
+		435
+		436
+		438
+		439
+		441
+		443
+		444
+		460
+		463
+		464
+		470
+		475
+		477
+		480
+		481
+		482
+		483
+		484
+		485
+		486
+		487
+		489
+		493
+		494
+		495
+	}
+
+	102->300 [headport=nw tailport=s]
+	103->300 [headport=ne tailport=s style=dashed]
+	102->301 [headport=nw tailport=s]
+	103->301 [headport=ne tailport=s style=dashed]
+	102->305 [headport=nw tailport=s]
+	103->305 [headport=ne tailport=s style=dashed]
+	international[label="one of 300, 435, 436" color=white]
+	international->307
+	102->307 [headport=nw tailport=s]
+	103->307 [headport=ne tailport=s style=dashed]
+	102->311 [headport=nw tailport=s]
+	103->311 [headport=ne tailport=s style=dashed]
+	102->312 [headport=nw tailport=s]
+	103->312 [headport=ne tailport=s style=dashed]
+	102->327 [headport=nw tailport=s]
+	103->327 [headport=ne tailport=s style=dashed]
+	102->331 [headport=nw tailport=s]
+	103->331 [headport=ne tailport=s style=dashed]
+	102->334 [headport=nw tailport=s]
+	103->334 [headport=ne tailport=s style=dashed]
+	102->348 [headport=nw tailport=s]
+	103->348 [headport=ne tailport=s style=dashed]
+	102->362 [headport=nw tailport=s]
+	103->362 [headport=ne tailport=s style=dashed]
+	102->389 [headport=nw tailport=s]
+	103->389 [headport=ne tailport=s style=dashed]
+	102->390 [headport=nw tailport=s]
+	103->390 [headport=ne tailport=s style=dashed]
+	102->395 [headport=nw tailport=s]
+	103->395 [headport=ne tailport=s style=dashed]
+
+	320->400 [headport=nw tailport=s]
+	321->400 [headport=n tailport=s style=dashed]
+	322->400 [headport=ne tailport=s style=dotted]
+
+	320->401 [headport=nw tailport=s]
+	321->401 [headport=n tailport=s style=dashed]
+	322->401 [headport=ne tailport=s style=dotted]
+
+	320->402 [headport=nw tailport=s]
+	322->402 [headport=ne tailport=s style=dotted]
+
+	321->412 [headport=n tailport=s style=dashed]
+	322->412 [headport=ne tailport=s style=dotted]
+
+	320->413 [headport=nw tailport=s]
+	322->413 [headport=ne tailport=s style=dotted]
+
+	413->414
+
+	413->415
+
+	320->417 [headport=nw tailport=s]
+	322->417 [headport=ne tailport=s style=dotted]
+
+	320->421 [headport=nw tailport=s]
+	321->421 [headport=n tailport=s style=dashed]
+	322->421 [headport=ne tailport=s style=dotted]
+
+	320->432 [headport=nw tailport=s]
+	322->432 [headport=ne tailport=s style=dotted]
+
+	320->435 [headport=nw tailport=s]
+	322->435 [headport=ne tailport=s style=dotted]
+
+	320->436 [headport=nw tailport=s]
+	321->436 [headport=n tailport=s style=dashed]
+	322->436 [headport=ne tailport=s style=dotted]
+
+	320->438 [headport=nw tailport=s]
+	322->438 [headport=ne tailport=s style=dotted]
+
+	320->439 [headport=nw tailport=s]
+	321->439 [headport=n tailport=s style=dashed]
+	322->439 [headport=ne tailport=s style=dotted]
+
+	320->441 [headport=nw tailport=s]
+	322->441 [headport=ne tailport=s style=dotted]
+
+	320->443 [headport=nw tailport=s]
+	321->443 [headport=n tailport=s style=dashed]
+	322->443 [headport=ne tailport=s style=dotted]
+
+	320->444 [headport=nw tailport=s]
+	321->444 [headport=n tailport=s style=dashed]
+	322->444 [headport=ne tailport=s style=dotted]
+
+	320->460 [headport=nw tailport=s]
+	322->460 [headport=ne tailport=s style=dotted]
+
+	320->463 [headport=nw tailport=s]
+	322->463 [headport=ne tailport=s style=dotted]
+
+	320->464 [headport=nw tailport=s]
+	322->464 [headport=ne tailport=s style=dotted]
+
+	320->470 [headport=nw tailport=s]
+	321->470 [headport=n tailport=s style=dashed]
+	322->470 [headport=ne tailport=s style=dotted]
+
+	320->475 [headport=nw tailport=s]
+	322->475 [headport=ne tailport=s style=dotted]
+
+	320->477 [headport=nw tailport=s]
+	321->477 [headport=n tailport=s style=dashed]
+	322->477 [headport=ne tailport=s style=dotted]
+
+	320->480 [headport=nw tailport=s]
+	322->480 [headport=ne tailport=s style=dotted]
+	CalcII->480
+
+	320->481 [headport=nw tailport=s]
+	Stats->481 [headport=sw tailport=s style=dotted]
+	CalcII->481 [headport=se tailport=s]
+
+	320->482 [headport=nw tailport=s]
+	Stats->482 [headport=sw tailport=s style=dotted]
+	CalcII->482 [headport=se tailport=s]
+
+	320->483 [headport=nw tailport=s]
+	Stats->483 [headport=sw tailport=s style=dotted]
+	CalcII->483 [headport=se tailport=s]
+
+	320->484 [headport=nw tailport=s]
+	322->484 [headport=ne tailport=s style=dotted]
+
+	320->485 [headport=nw tailport=s]
+	321->485 [headport=n tailport=s style=dashed]
+	322->485 [headport=ne tailport=s style=dotted]
+
+	320->486 [headport=nw tailport=s]
+	322->486 [headport=ne tailport=s style=dotted]
+
+	320->487 [headport=nw tailport=s]
+	322->487 [headport=ne tailport=s style=dotted]
+	CalcII->487
+
+	320->489 [headport=nw tailport=s]
+	321->489 [headport=n tailport=s style=dashed]
+	322->489 [headport=ne tailport=s style=dotted]
+
+	320->493 [headport=nw tailport=s]
+	321->493 [headport=n tailport=s style=dashed]
+	322->493 [headport=ne tailport=s style=dotted]
+
+	320->494 [headport=nw tailport=s]
+	321->494 [headport=n tailport=s style=dashed]
+	322->494 [headport=ne tailport=s style=dotted]
+
+	495
+
+}
+	</script>
+	<script src="./viz.js"></script>
+	<script>
+
+      function inspect(s) {
+        return "<pre>" + s.replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\"/g, "&quot;") + "</pre>"
+      }
+
+      function src(id) {
+        return document.getElementById(id).innerHTML;
+      }
+
+      function example(id, format, engine) {
+        var result;
+        try {
+          result = Viz(src(id), format, engine);
+          if (format === "svg")
+            return result;
+          else
+            return inspect(result);
+        } catch(e) {
+          return inspect(e.toString());
+        }
+      }
+      document.body.innerHTML += example("cluster", "svg", "dot");
+    </script>
+</body>
