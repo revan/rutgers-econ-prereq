@@ -8,7 +8,7 @@
 	<p> 7 classes in red are required classes. </p>
 
 	<script type="text/vnd.graphviz" id="cluster">
-digraph {
+digraph ""{
 	ordering = "out";
 	overlap = false;
 	splines = true;
@@ -18,13 +18,13 @@ digraph {
 		ordering = "out";
 		node [fillcolor=red style=filled]
 
-		102
-		103
-		320
-		321
-		322
-		CalcI
-		Stats
+		102   [tooltip="Introduction to Microeconomics"]
+		103   [tooltip="Introduction to Macroeconomics"]
+		320   [tooltip="Intermediate Microeconomic Analysis"]
+		321   [tooltip="Intermediate Macroeconomic Analysis"]
+		322   [tooltip="Econometrics"]
+		CalcI [tooltip="Calculus I"]
+		Stats [tooltip="Statistics I"]
 
 		CalcI->320
 		102->320 [headport=nw tailport=s]
@@ -41,61 +41,63 @@ digraph {
 		style=filled;
 		color=lightgrey;
 		label="Lower Level Electives (max 3)";
+		node [fillcolor=white style=filled]
 
-		300
-		301
-		305
-		307
-		311
-		312
-		327
-		331
-		334
-		348
-		362
-		389
-		390
-		395
+		300 [tooltip="International Economics"]
+		301 [tooltip="Money, Banking and the Financial System"]
+		305 [tooltip="American Economic History"]
+		307 [tooltip="Economics of Globalization"]
+		311 [tooltip="Methods of Cost-Benefit Analysis"]
+		312 [tooltip=""]
+		327 [tooltip="History of Economic Thought"]
+		331 [tooltip="Economics of Crime"]
+		334 [tooltip="Energy Economics"]
+		348 [tooltip="Economics of Social Welfare Programs"]
+		362 [tooltip="Comparative Economic Systems"]
+		389 [tooltip="Public Policies toward Business"]
+		390 [tooltip="Choice and Strategy in Politics"]
+		395 [tooltip="Law and Economics"]
 	}
 
 	subgraph cluster_upper_elec {
 		label="Upper Level Electives (min 4)"
+		node [fillcolor=white style=filled]
 
-		400
-		401
-		402
-		412
-		413
-		414
-		415
-		417
-		421
-		432
-		435
-		436
-		438
-		439
-		441
-		443
-		444
-		460
-		463
-		464
-		470
-		475
-		477
-		480
-		481
-		482
-		483
-		484
-		485
-		486
-		487
-		489
-		493
-		494
-		495
+		400 [tooltip="Advanced Time Series and Financial Econometrics"]
+		401 [tooltip="Advanced Cross-Sectional and Panel Econometrics"]
+		402 [tooltip="Labor Economics"]
+		412 [tooltip="Monetary Theory and Policy"]
+		413 [tooltip="Financial Economics"]
+		414 [tooltip="Economics of Capital Markets"]
+		415 [tooltip="Portfolio Theory"]
+		417 [tooltip="Health Economics"]
+		421 [tooltip="Economic Forecasting and Big Data"]
+		432 [tooltip="Environmental Economics"]
+		435 [tooltip="International Trade"]
+		436 [tooltip="International Balance of Payments"]
+		438 [tooltip="Education Economics"]
+		439 [tooltip="Economic Development"]
+		441 [tooltip="Industrial Organization"]
+		443 [tooltip="European Economic History"]
+		444 [tooltip="Financial and Monetary History of the United States"]
+		460 [tooltip="Public Economics"]
+		463 [tooltip="Economics of Taxation"]
+		464 [tooltip="Personal Economics and Public Policy"]
+		470 [tooltip="Economic Growth"]
+		475 [tooltip="Women, Men, and the Economy"]
+		477 [tooltip="Economics of Population"]
+		480 [tooltip="Behavioral and Experimental Economics"]
+		481 [tooltip="Economics of Uncertainty"]
+		482 [tooltip="Game Theory and Economics"]
+		483 [tooltip="Economics of Information"]
+		484 [tooltip="Market Discipline"]
+		485 [tooltip="Mathematical Economics"]
+		486 [tooltip="Operations Research I"]
+		487 [tooltip="Operations Research II"]
+		489 [tooltip="Advanced Topics in Economic Theory"]
+		493 [tooltip="Honors Research Seminar I"]
+		494 [tooltip="Honors Research Seminar II"]
+		495 [tooltip="Seminar in Economics"]
 	}
 
 	102->300 [headport=nw tailport=s]
